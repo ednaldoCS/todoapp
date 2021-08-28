@@ -1,0 +1,120 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.container{
+	width: 608px;
+	margin: 0px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.title{
+	font-size: 36px;
+	color: #333333;
+	margin-bottom: 56px;
+	margin-top: 32px;
+}
+nav{
+	width: 600px;
+	margin: 0px auto;
+	border-bottom: 1px solid #bdbdbd ;
+}
+ul {
+	list-style: none;
+	display: flex;
+}
+ul li{
+	
+	width: 33%;
+	text-align: center;
+}
+
+ul li p{
+	width: 100px;
+	text-decoration: none;
+	padding: 0px 20px;
+	cursor: pointer;
+	font-size: 14px;
+	padding: 15px;
+}
+
+input[type='checkbox']{
+	/*appearance: none;
+	-webkit-appearence: none;*/
+	height: 20px;
+	width: 20px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input:checked{
+	appearance: none;
+	background: #2f80ed;
+	color: white;
+}
+input[type='checkbox']::after{
+	content: '\2714';
+}
+
+#todoList{
+	width: 100%;
+}
+.activeted{
+	border-bottom: 4px solid #2f80ed;
+	border-radius: 4px 4px 0px 0px;
+}
+
+
+.item {
+	display: flex;
+	flex-direction: row;
+	margin: 10px;
+	align-items: center;
+}
+
+.textoToDo{
+	text-decoration: line-through;
+}
+.btn-excluir{
+	border: none;
+	padding: 10px;
+	background: #2d80de;
+	color: white;
+	margin-left: auto;
+}
+
+#addItem{
+	margin: 20px auto;
+}
+
+#addItem input{
+	width: 70%;
+	height: 56px;
+	border: 1px solid #bdbdbd;
+	outline: none;
+	padding: 0px 15px;
+	border-radius: 12px;
+}
+
+#addItem button{
+	height: 56px;
+	background: #2f80ed;
+	width: 20%;
+	border: none;
+	border-radius: 12px;
+	color: white;
+}
+
+#all{
+}
+
+#active,#completed{
+	display: none;
+}

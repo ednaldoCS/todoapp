@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ToDo App</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="script.js"></script>
+
+</head>
+<body  onclick="elem()">
+	<div class="container">
+		<h2 class="title">#todo</h2>
+		<nav>
+			<ul>
+				<li><p class="active" id="al" onclick="way('all',this.id)" >All</p></li>
+				<li><p  onclick="way('active',this.id)" id="ac">Active</p></li>
+				<li><p onclick="way('completed',this.id)"  id="cp">Completed</p></li>
+			</ul>
+		</nav>
+		<div id="todoList">
+			<div id="addItem">
+				<input type="text" id="valueItem" placeholder="add details">
+				<button onclick="add()" >Add</button>
+			</div>
+
+
+		
+			<div id="all">
+				
+			</div>
+
+			<div id="active">
+				active
+			</div>
+
+			<div id="completed">
+				completed
+
+				<button onclick="deleteAll()">Delete All</button>
+			</div>
+
+
+			<!-- <div style="">
+				<label for="radio">Envia avisos por E-mail?</label>
+				<input type="radio" id="radio">
+			</div> -->
+
+
+		</div>
+	</div>
+</body>
+</html>
