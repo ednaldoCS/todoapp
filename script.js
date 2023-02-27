@@ -13,8 +13,9 @@ function nextId(){
 }
 
 function elem (){
-	alert('Chagenado aqui')
+	
 	var elemento=document.activeElement;
+	console.log(elemento)
 	if (elemento.checked) {
 		let divElemento=document.getElementById('item'+elemento.id);
 		let id=localStorage.getItem('id');
