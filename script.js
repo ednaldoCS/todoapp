@@ -19,7 +19,7 @@ function elem (){
 		let id=localStorage.getItem('id');
 		let elementoLS=JSON.parse(localStorage.getItem(elemento.id));
 		//localStorage.removeItem(elemento.id);
-		let status='disabled'
+		let status=false
 		elementoLS.status=status;
 		localStorage.setItem(elemento.id,JSON.stringify(elementoLS))
 		localStorage.id=id
@@ -40,7 +40,7 @@ function add(){
 		return false
 	}else{
 		//console.log(id)
-		localStorage.setItem(id,JSON.stringify({item:item, status:'actived'}))
+		localStorage.setItem(id,JSON.stringify({item:item, status:true}))
 		localStorage.setItem('id',id)
 
 		document.getElementById('valueItem').value=''
