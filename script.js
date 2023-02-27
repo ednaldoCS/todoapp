@@ -13,6 +13,7 @@ function nextId(){
 }
 
 function elem (){
+	alert('Chagenado aqui')
 	var elemento=document.activeElement;
 	if (elemento.checked) {
 		let divElemento=document.getElementById('item'+elemento.id);
@@ -20,6 +21,19 @@ function elem (){
 		let elementoLS=JSON.parse(localStorage.getItem(elemento.id));
 		//localStorage.removeItem(elemento.id);
 		let status=false
+		elementoLS.status=status;
+		localStorage.setItem(elemento.id,JSON.stringify(elementoLS))
+		localStorage.id=id
+		console.log(elementoLS) 
+		//ele.style.display='none'
+		// let statusAtv=ele.getAttribute('status');
+		// let statusDes=ele.setAttribute('status','desativado')
+	}else{
+	       let divElemento=document.getElementById('item'+elemento.id);
+		let id=localStorage.getItem('id');
+		let elementoLS=JSON.parse(localStorage.getItem(elemento.id));
+		//localStorage.removeItem(elemento.id);
+		let status=true
 		elementoLS.status=status;
 		localStorage.setItem(elemento.id,JSON.stringify(elementoLS))
 		localStorage.id=id
@@ -101,6 +115,7 @@ function way(type='all',item='al'){
 			div.setAttribute('status',item.status)
 
 			let input=document.createElement('input');
+			input.addEventListener('click', elem)
 			input.type='checkbox'
 			input.checked=item.status
 			input.id=i
@@ -157,6 +172,7 @@ function way(type='all',item='al'){
 			div.setAttribute('status',item.status)
 
 			let input=document.createElement('input');
+			input.addEventListener('click', elem)
 			input.type='checkbox'
 			input.checked=item.status
 			input.id=i
@@ -210,6 +226,7 @@ function way(type='all',item='al'){
 			div.setAttribute('status',item.status)
 
 			let input=document.createElement('input');
+			input.addEventListener('click', elem)
 			input.type='checkbox'
 			input.checked=item.status
 			input.id=i
