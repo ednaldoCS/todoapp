@@ -54,7 +54,7 @@ function add(){
 		return false
 	}else{
 		//console.log(id)
-		localStorage.setItem(id,JSON.stringify({item:item, status:true}))
+		localStorage.setItem(id,JSON.stringify({item:item, status:false}))
 		localStorage.setItem('id',id)
 
 		document.getElementById('valueItem').value=''
@@ -115,7 +115,7 @@ function way(type='all',item='al'){
 			div.setAttribute('status',item.status)
 
 			let input=document.createElement('input');
-			input.addEventListener('click', elem)
+			input.addEventListener('click', elem())
 			input.type='checkbox'
 			input.checked=item.status
 			input.id=i
@@ -172,7 +172,7 @@ function way(type='all',item='al'){
 			div.setAttribute('status',item.status)
 
 			let input=document.createElement('input');
-			input.addEventListener('click', elem)
+			input.addEventListener('click', elem())
 			input.type='checkbox'
 			input.checked=item.status
 			input.id=i
@@ -226,7 +226,7 @@ function way(type='all',item='al'){
 			div.setAttribute('status',item.status)
 
 			let input=document.createElement('input');
-			input.addEventListener('click', elem)
+			input.addEventListener('click', elem())
 			input.type='checkbox'
 			input.checked=item.status
 			input.id=i
