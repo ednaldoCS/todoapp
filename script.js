@@ -102,7 +102,7 @@ function way(type='all',item='al'){
 
 			let input=document.createElement('input');
 			input.type='checkbox'
-			input.value=item.status
+			input.checked=item.status
 			input.id=i
 			input.classList='item'
 
@@ -112,17 +112,17 @@ function way(type='all',item='al'){
 			let btn=document.createElement('button');
 			btn.innerHTML='Remove'
 			btn.id=i;
-			// btn.onclick=()=>{
-			// 	let id = btn.id
-			// 	localStorage.removeItem(id)
-			// }
+			btn.onclick=()=>{
+				let id = btn.id
+				localStorage.removeItem(id)
+			}
 
-			// if (item.status==='disabled') {
-			// 	div.disabled='disabled'
-			// 	input.checked=true;
-			// 	input.disabled='disabled'
-			// 	p.classList='textoToDo'
-			// }
+			if (item.status==='disabled') {
+				div.disabled='disabled'
+				input.checked=true;
+				input.disabled='disabled'
+				p.classList='textoToDo'
+			}
 
 
 			div.appendChild(input);
@@ -158,6 +158,7 @@ function way(type='all',item='al'){
 
 			let input=document.createElement('input');
 			input.type='checkbox'
+			input.checked=item.status
 			input.id=i
 			input.classList='item'
 
@@ -167,10 +168,10 @@ function way(type='all',item='al'){
 			let btn=document.createElement('button');
 			btn.innerHTML='Remove'
 			btn.id=i;
-			// btn.onclick=()=>{
-			// 	let id = btn.id
-			// 	localStorage.removeItem(id)
-			// }
+			btn.onclick=()=>{
+				let id = btn.id
+				localStorage.removeItem(id)
+			}
 
 			if (item.status==='disabled') {
 				div.style.border='1px solid red'
@@ -210,6 +211,7 @@ function way(type='all',item='al'){
 
 			let input=document.createElement('input');
 			input.type='checkbox'
+			input.checked=item.status
 			input.id=i
 			input.classList='item'
 
